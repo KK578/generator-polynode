@@ -1,0 +1,38 @@
+{
+  "name": "generator-polynode",
+  "version": "0.1.0",
+  "description": "Yeoman generator for Polymer projects with Node.js",
+  "keywords": [
+    "node.js",
+    "polymer",
+    "scaffold",
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/kk578/generator-polynode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kk578/generator-polynode"
+  },
+  "main": "app/index.js",
+  "author": {
+    "email": "KevinKwan95@googlemail.com",
+    "name": "Kevin Kwan"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "ast-query": "^1.0.1",
+    "html-wiring": "^1.2.0",
+    "yeoman-generator": "^0.20.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-jscs": "^1.8.0",
+    "grunt-mocha-test": "^0.12.7",
+    "jit-grunt": "^0.9.1",
+    "load-grunt-config": "^0.17.1",
+    "mocha": "^2.2.5",
+    "time-grunt": "^1.2.1"
+  }
+}

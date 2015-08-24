@@ -1,0 +1,22 @@
+{
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "latedef": true,
+    "maxstatements": 10,
+    "noarg": true,
+    "nocomma": true,
+    "undef": true,
+    "unused": "vars",
+
+    // Environments
+    "browser": true,
+    "devel": true,
+    "mocha": true,
+    "node": true,
+    "globals": {
+        "chai": true,
+        "Polymer": true
+    }
+}

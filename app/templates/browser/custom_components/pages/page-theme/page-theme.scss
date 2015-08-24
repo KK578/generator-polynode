@@ -1,0 +1,16 @@
+@import '../../../stylesheets/scss/_layout.scss';
+@import '../../../stylesheets/scss/_mixins.scss';
+@import '../../../stylesheets/scss/_theme.scss';
+
+:host {
+    display: block;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 8px 0;
+}
+
+.container {
+    @include center(720px);
+}

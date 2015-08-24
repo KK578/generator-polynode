@@ -1,0 +1,24 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html" />
+
+<!--
+Include dependencies within the elements.html.
+For quick inspection, note the element's dependencies here.
+************************************************************
+    paper-material
+************************************************************
+-->
+
+<dom-module id="fancy-material">
+    <link rel="import" type="css" href="fancy-material.css?__inline" />
+    <template>
+        <paper-material>
+            <div id="top">
+                <content select="h1"></content>
+            </div>
+            <div id="content">
+                <content></content>
+            </div>
+        </paper-material>
+    </template>
+    <script src="fancy-material.js?__inline"></script>
+</dom-module>

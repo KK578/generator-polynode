@@ -1,0 +1,5 @@
+{
+    "analytics": false,
+    "directory": "browser/bower_components",
+    "timeout": 120000
+}

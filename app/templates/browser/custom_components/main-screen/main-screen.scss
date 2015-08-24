@@ -1,0 +1,34 @@
+@import '../../stylesheets/scss/_layout.scss';
+@import '../../stylesheets/scss/_mixins.scss';
+@import '../../stylesheets/scss/_theme.scss';
+
+:host {
+    display: block;
+}
+
+paper-header-panel {
+    background-color: $theme-background;
+
+    &::shadow #mainContainer {
+        overflow-y: hidden;
+    }
+
+    paper-toolbar {
+        background-color: $theme-primary;
+    }
+}
+
+paper-item.navItem {
+    @include transition(color 0.3s ease-out, background-color 0.3s ease-out);
+    position: relative;
+    color: $black-primary;
+    background-color: $theme-background;
+    cursor: pointer;
+    min-height: 0;
+    padding: 0.9em 1em;
+
+    &.iron-selected {
+        color: $white-primary;
+        background-color: $theme-primary-dark;
+    }
+}

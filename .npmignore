@@ -1,0 +1,8 @@
+﻿grunt/
+test/
+.editorconfig
+.gitattributes
+.gitignore
+.jscsrc
+.jshintrc
+gruntfile.js

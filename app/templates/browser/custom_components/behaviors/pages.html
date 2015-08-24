@@ -1,0 +1,28 @@
+<script>
+var Behaviors = Behaviors || {};
+Behaviors.PageBehavior = {
+    properties: {
+        pages: {
+            type: Object,
+            value: [
+                {
+                    'tag': '/home',
+                    'title': 'Home',
+                    'element': 'page-home'
+                },
+                {
+                    'tag': '/theme',
+                    'title': 'Theme',
+                    'element': 'page-theme'
+                },
+                {
+                    'tag': '/about',
+                    'title': 'About',
+                    'element': 'page-about'
+                }
+            ],
+            readOnly: true
+        }
+    }
+};
+</script>

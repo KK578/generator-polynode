@@ -1,0 +1,25 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html" />
+
+<!--
+Include dependencies within the elements.html.
+For quick inspection, note the element's dependencies here.
+************************************************************
+    fancy-material
+************************************************************
+-->
+
+<dom-module id="page-home">
+    <link rel="import" type="css" href="page-home.css?__inline" />
+    <template>
+        <fancy-material>
+            <h1>Home</h1>
+            <p>Welcome to the <%= appName %> home page scaffolded by Generator-PolyNode!</p>
+        </fancy-material>
+
+        <fancy-material>
+            <h1>Navigation</h1>
+            <p>To navigate the app, select an item from the menu.</p>
+        </fancy-material>
+    </template>
+    <script src="page-home.js?__inline"></script>
+</dom-module>

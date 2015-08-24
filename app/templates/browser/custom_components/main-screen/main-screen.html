@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html" />
+
+<!--
+Include dependencies within the elements.html.
+For quick inspection, note the element's dependencies here.
+************************************************************
+    iron-selector
+    iron-icons
+
+    paper-drawer-panel
+    paper-header-panel
+    paper-toolbar
+    paper-item
+    paper-icon-button
+
+    platinum-sw-register
+    platinum-sw-cache
+
+    routed-pages
+************************************************************
+-->
+
+<dom-module id="main-screen">
+    <link rel="import" type="css" href="main-screen.css?__inline" />
+    <template>
+        <paper-drawer-panel id="drawerContainer">
+            <!-- Drawer -->
+            <paper-header-panel drawer>
+                <!-- Toolbar -->
+                <paper-toolbar>
+                    <h1>Navigation</h1>
+                </paper-toolbar>
+
+                <!-- Navigation items -->
+                <iron-selector selected="{{selectedPage}}">
+                    <template is="dom-repeat" items="{{pages}}">
+                        <paper-item class="navItem" on-tap="changePage">
+                            <paper-ripple></paper-ripple>
+                            <span>{{item.title}}</span>
+                        </paper-item>
+                    </template>
+                </iron-selector>
+            </paper-header-panel>
+
+            <!-- Main -->
+            <paper-header-panel main>
+                <!-- Toolbar -->
+                <paper-toolbar>
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <h1>Welcome!</h1>
+                </paper-toolbar>
+
+                <!-- Application -->
+                <routed-pages class="layout fit"></routed-pages>
+            </paper-header-panel>
+        </paper-drawer-panel>
+
+        <!-- NOTE: Uncomment below to enable ServiceWorker (1/3) -->
+        <!--
+        <platinum-sw-register auto-register clients-claim skip-waiting on-service-worker-installed="displaySwToast">
+            <platinum-sw-cache default-cache-strategy="fastest" cache-config-file="cache-config.json"></platinum-sw-cache>
+        </platinum-sw-register>
+        -->
+    </template>
+    <script src="main-screen.js?__inline"></script>
+</dom-module>

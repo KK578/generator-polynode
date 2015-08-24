@@ -1,0 +1,23 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html" />
+
+<!--
+Include dependencies within the elements.html.
+For quick inspection, note the element's dependencies here.
+************************************************************
+    behaviours/pages
+
+    neon-animated-pages
+************************************************************
+-->
+
+<dom-module id="routed-pages">
+    <link rel="import" type="css" href="routed-pages.css?__inline" />
+    <template>
+        <!-- Contents is templated from pages behavior -->
+        <neon-animated-pages id="pages" class="layout fit"
+                             attr-for-selected="route" selected="{{selectedPage}}"
+                             entry-animation="fade-in-animation" exit-animation="fade-out-animation">
+        </neon-animated-pages>
+    </template>
+    <script src="routed-pages.js?__inline"></script>
+</dom-module>

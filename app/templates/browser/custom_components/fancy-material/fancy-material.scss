@@ -1,0 +1,44 @@
+@import '../../stylesheets/scss/_layout.scss';
+@import '../../stylesheets/scss/_mixins.scss';
+@import '../../stylesheets/scss/_theme.scss';
+
+:host {
+    display: block;
+    @include center(720px);
+}
+
+#top {
+    background-color: $theme-primary;
+    color: $white-primary;
+
+    &::content h1 {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+#content::content {
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+paper-material {
+    @include border-radius(4px);
+    padding: 0;
+
+    #top {
+        @include border-radius(4px 4px 0 0);
+        padding: 12px 20px;
+    }
+
+    #content {
+        @include border-radius(0 0 4px 4px);
+        background-color: $white-primary;
+        padding: 20px;
+    }
+}

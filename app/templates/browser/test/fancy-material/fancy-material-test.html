@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WCT Test - fancy-material</title>
+    <meta charset="utf-8" />
+
+    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+
+    <!-- Add your Element dependencies here -->
+    <link rel="import" href="../../bower_components/paper-material/paper-material.html" />
+
+    <!-- Main Element to test -->
+    <link rel="import" href="../../custom_components/fancy-material/fancy-material.html" />
+</head>
+<body>
+    <!-- Add element markup here -->
+    <fancy-material>
+        <h1>This is the test title.</h1>
+        <p>This is the test content.</p>
+    </fancy-material>
+
+    <!-- WCT Suite -->
+    <script src="fancy-material-test.js"></script>
+</body>
+</html>

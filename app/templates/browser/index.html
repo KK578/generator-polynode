@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title><%= appName %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="<%= themeColorHex %>" />
+
+    <link rel="icon" href="media/webassets/favicon.ico" />
+
+    <link rel="stylesheet" href="stylesheets/index.css?__inline=true" />
+    <link rel="stylesheet" href="stylesheets/theme.css?__inline_true" />
+
+    <script src="scripts/load.js" async></script>
+    <script async>
+    // Toast event listener
+    window.addEventListener('toast-message', function (event) {
+        var detail = event.detail;
+
+        var toast = document.querySelector('#appToast');
+        toast.text = detail.message;
+        toast.show();
+    });
+    </script>
+</head>
+<!-- body layout fullbleed -->
+<body>
+    <!-- splash-screen layout vertical center center-justified -->
+    <splash-screen id="splashScreen" class="loading">
+        <!-- paper-material layout vertical center -->
+        <paper-material id="splashCard" class="loading" animated="true" elevation="0">
+            <span id="title" class="loading">Just a moment!</span>
+            <paper-spinner id="splashSpinner" class="start" active="true"></paper-spinner>
+        </paper-material>
+    </splash-screen>
+
+    <!-- Application -->
+    <main-screen></main-screen>
+
+    <!-- Application toast bar -->
+    <paper-toast id="appToast"></paper-toast>
+</body>
+</html>

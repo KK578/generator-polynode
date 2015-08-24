@@ -1,0 +1,113 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html" />
+
+<!--
+Include dependencies within the elements.html.
+For quick inspection, note the element's dependencies here.
+************************************************************
+    paper-material
+    fancy-material
+************************************************************
+-->
+
+<dom-module id="page-theme">
+    <link rel="import" type="css" href="page-theme.css?__inline" />
+    <template>
+        <fancy-material>
+            <h1>Global Theme</h1>
+            <p>This page demonstrates the various elements that have been themed by Generator-PolyNode.</p>
+            <p>This includes an opinionated version of design principles found on Google's <a href="http://www.google.com/design/spec/">Material Design Specsheet</a> applied to standard elements used on the web.</p>
+
+            <p>If you wish to configure the theme, edit '<%= appName %>/browser/stylesheets/theme.scss'.<br />To entirely remove the theme, remove the import in '<%= appName %>/browser/index.html'</p>
+        </fancy-material>
+
+        <div class="container">
+            <paper-material>
+                <h1>A more Standard Card</h1>
+                <p>This is the standard layout for a paper-material card.</p>
+                <em>Note: Size contraints are set by the user. This card has been limited to 720px maximum width by its container.</em>
+            </paper-material>
+        </div>
+
+        <fancy-material>
+            <h1>Plain Text Elements</h1>
+            <div class="table-container">
+                <table class="vertical" style="min-width: 420px;">
+                    <thead>
+                        <tr>
+                            <th>Element</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>h1</th>
+                            <td>
+                                <h1>The quick brown fox jumped over the lazy dog.</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>p</th>
+                            <td>
+                                <p>The quick brown fox jumped over the lazy dog.</p></td>
+                        </tr>
+                        <tr>
+                            <th>em</th>
+                            <td><em>The quick brown fox jumped over the lazy dog.</em></td>
+                        </tr>
+                        <tr>
+                            <th>a</th>
+                            <td><a href="#/theme">#/theme</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fancy-material>
+
+        <fancy-material>
+            <h1>Table Layouts</h1>
+
+            <h2>Standard Table</h2>
+            <p>A standard data table layout. Best fitted for a unique ID in first column with relevant matching data in following columns.</p>
+            <em>Note: Requires the use of &lt;thead&gt; and &lt;tbody&gt;.</em>
+            <div class="table-container">
+                <table style="min-width: 550px">
+                    <thead>
+                        <tr>
+                            <template is="dom-repeat" items="{{headers}}">
+                                <th>{{item}}</th>
+                            </template>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template is="dom-repeat" items="{{foods}}">
+                            <tr>
+                                <td>{{item.name}}</td>
+                                <td>{{item.calories}}</td>
+                                <td>{{item.fat}}</td>
+                                <td>{{item.carbs}}</td>
+                                <td>{{item.protein}}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Vertical Table</h2>
+            <p>Secondary data table layout. Best fitted for when describing a single object in detail.</p>
+            <em>Note: Headers are the first child of each row.</em>
+            <div class="table-container">
+                <table class="vertical" style="min-width: 320px">
+                    <tbody>
+                        <template is="dom-repeat" items="{{verticalData}}">
+                            <tr>
+                                <th>{{item.header}}</th>
+                                <td>{{item.value}}</td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </fancy-material>
+    </template>
+    <script src="page-theme.js?__inline"></script>
+</dom-module>

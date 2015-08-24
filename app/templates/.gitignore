@@ -1,28 +1,26 @@
 ###################
 ## Visual Studio ##
+*.sln
 *.suo
 *.user
-*.sln
 *.sln.docstates
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 x64/
-.vs/
 build/
 bld/
 [Bb]in/
 [Oo]bj/
 
 ##########
-## NTVS ##
-*.njsproj
-.ntvs_analysis.dat
-
-##########
 ## Logs ##
 *.log
 logs/
+
+##########
+## NTVS ##
+.ntvs_analysis.dat
 
 ############
 ## Caches ##

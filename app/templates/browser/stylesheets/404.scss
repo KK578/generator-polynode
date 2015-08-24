@@ -1,0 +1,29 @@
+﻿@import 'scss/_layout.scss';
+@import 'scss/_mixins.scss';
+@import 'scss/_theme.scss';
+
+html, body {
+    @include layout-fullbleed;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+#container {
+    @include layout;
+    @include layout-center;
+    @include layout-center-justified;
+    background-color: $theme-background;
+    height: 100%;
+    text-align: center;
+
+    h1 {
+        color: $theme-primary;
+        font-size: 2em;
+        margin: 0;
+    }
+
+    p {
+        color: $theme-primary-dark;
+    }
+}

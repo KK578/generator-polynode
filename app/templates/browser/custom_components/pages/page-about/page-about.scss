@@ -1,0 +1,7 @@
+@import '../../../stylesheets/scss/_layout.scss';
+@import '../../../stylesheets/scss/_mixins.scss';
+@import '../../../stylesheets/scss/_theme.scss';
+
+:host {
+    display: block;
+}

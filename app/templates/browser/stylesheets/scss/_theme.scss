@@ -1,0 +1,29 @@
+﻿@import '_material_color.scss';
+@import '_mixins.scss';
+
+/*
+    $theme-background: $color-<%= themeColor %>-50;
+    $theme-loading-background: $color-<%= themeColor %>-500;
+
+    $theme-primary: $color-<%= themeColor %>-500;
+    $theme-primary-light: $color-<%= themeColor %>-300;
+    $theme-primary-dark: $color-<%= themeColor %>-700;
+
+    $theme-accent: $color-<%= themeColorAccent %>-A400;
+    $theme-accent-light: $color-<%= themeColorAccent %>-A200;
+    $theme-accent-dark: $color-<%= themeColorAccent %>-A700;
+*/
+
+$theme-background: $color-indigo-50;
+$theme-loading-background: $color-indigo-500;
+
+$theme-table-row-1: $color-indigo-50;
+$theme-table-row-2: $color-indigo-100;
+
+$theme-primary: $color-indigo-500;
+$theme-primary-light: $color-indigo-300;
+$theme-primary-dark: $color-indigo-700;
+
+$theme-accent: $color-cyan-A400;
+$theme-accent-light: $color-cyan-A200;
+$theme-accent-dark: $color-cyan-A700;

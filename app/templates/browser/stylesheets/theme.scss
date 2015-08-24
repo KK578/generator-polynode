@@ -1,0 +1,111 @@
+﻿@import 'scss/_layout.scss';
+@import 'scss/_mixins.scss';
+@import 'scss/_theme.scss';
+
+/* Very Global */
+html, body {
+    @include layout-fullbleed;
+    @include user-select(none);
+    font-family: 'Roboto', 'Noto', sans-serif;
+    /* Remove blue colouring on android on tapping an item */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: $black-primary;
+}
+
+/* Elements */
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 8px 0;
+}
+
+i, em {
+    color: $black-secondary;
+}
+
+a {
+    text-decoration: none;
+    color: $theme-accent;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    overflow-x: auto;
+    table-layout: fixed;
+
+    thead {
+        background-color: $theme-primary;
+        color: $white-primary;
+        font-size: 24px;
+        min-height: 64px;
+    }
+
+    tbody {
+        > :nth-child(2n) {
+            background-color: $theme-table-row-2;
+        }
+
+        > :nth-child(2n+1) {
+            background-color: $theme-table-row-1;
+        }
+    }
+
+    th, td {
+        height: 56px;
+        padding: 4px 12px;
+        /* All elements after the first */
+        &:nth-child(n+2) {
+            text-align: right;
+        }
+
+        &:first-of-type {
+            padding-left: 24px;
+            text-align: left;
+        }
+
+        &:last-of-type {
+            padding-right: 24px;
+        }
+    }
+}
+
+table.vertical {
+    table-layout: auto;
+
+    tr {
+        > :first-child {
+            background-color: $theme-primary;
+            color: $white-primary;
+            font-size: 24px;
+            text-align: right;
+        }
+        /* All elements after the first */
+        > :nth-child(n+2) {
+            text-align: left;
+        }
+    }
+}
+/* Paper-Elements */
+paper-ripple {
+    color: $theme-accent;
+}
+
+paper-material {
+    @include border-radius(4px);
+    padding: 20px;
+    margin: 16px 12px;
+    background-color: $white-primary;
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WCT Test - routed-pages</title>
+    <meta charset="utf-8" />
+
+    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+
+    <!-- Add your Element dependencies here -->
+    <link rel="import" href="../../custom_components/behaviors/pages.html" />
+    <link rel="import" href="../../custom_components/pages/page-home/page-home.html" />
+    <link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html" />
+    <link rel="import" href="../../bower_components/neon-animation/animations/fade-in-animation.html" />
+    <link rel="import" href="../../bower_components/neon-animation/animations/fade-out-animation.html" />
+
+    <!-- Main Element to test -->
+    <link rel="import" href="../../custom_components/routed-pages/routed-pages.html" />
+</head>
+<body>
+    <!-- Add element markup here -->
+    <routed-pages></routed-pages>
+
+    <!-- WCT Suite -->
+    <script src="routed-pages-test.js"></script>
+</body>
+</html>
