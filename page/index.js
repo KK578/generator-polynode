@@ -6,26 +6,23 @@ var wiring = require('html-wiring');
 
 function appendPage(elementName, title) {
     var newPage = {
-        tag: '/' + elementName.split('page-')[1],
+        tag: '/' + elementName.split('page-')[1] + '/',
         title: title,
         element: elementName
     };
 
-    var pageBehavior = wiring.readFileAsString('browser/custom_components/behaviors/pages.html');
-    // Remove <script> and </script> tags
-    var js = pageBehavior.split('<script>')[1].split('<\/script>')[0];
-
-    var ast = program(js);
+    var pageBehavior = wiring.readFileAsString('browser/behaviors/page-behavior/page-behavior.js');
+    var ast = program(pageBehavior);
     // Find the value of Behaviors.PageBehavior and append the new page to the pages property.
-    ast.assignment('Behaviors.PageBehavior')
+    ast.assignment('App.Behaviors.PageBehavior')
         .value()
         .key('properties')
         .key('pages')
         .key('value')
         .push(JSON.stringify(newPage));
 
-    pageBehavior = '<script>\n' + ast.toString() + '\n</script>';
-    wiring.writeFileFromString(pageBehavior, 'browser/custom_components/behaviors/pages.html');
+    pageBehavior = ast.toString();
+    wiring.writeFileFromString(pageBehavior, 'browser/behaviors/page-behavior/page-behavior.js');
 }
 
 module.exports = yeoman.generators.Base.extend({

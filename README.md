@@ -209,5 +209,5 @@ Add test cases for new features and test your code with `grunt mochaTest`.
 
 ## Credits
 
- * [generator-polynode](https://github.com/yeoman/generator-polymer)
+ * [generator-polymer](https://github.com/yeoman/generator-polymer)
  * [polymer-starer-kit](https://github.com/PolymerElements/polymer-starter-kit)

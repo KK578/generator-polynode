@@ -1,4 +1,4 @@
-﻿Polymer({
+﻿App.Elements['<%= elementName %>'] = Polymer({
     is: '<%= elementName %>',
 
     /* Lifecycle Callbacks: https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html
