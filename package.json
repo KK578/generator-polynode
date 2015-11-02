@@ -1,6 +1,6 @@
 {
   "name": "generator-polynode",
-  "version": "0.1.0",
+  "version": "0.2.0-beta",
   "description": "Yeoman generator for Polymer projects with Node.js",
   "keywords": [
     "node.js",
